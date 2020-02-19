@@ -1,7 +1,14 @@
 import os
+import sys
 import csv
 
-data = csv.reader(open('Tokyo.csv'))
+path = '/Python/Housing-Analysis/Housing-Analysis/Tokyo.csv'
 
-for row in data:
-    print(row)
+with open(path, 'r', errors='ignore') as infile, open(path + 'final.csv', 'w') as outfile:
+    inputs = csv.reader(infile)
+    output = csv.writer(outfile)
+
+    i = next(inputs)
+    print(str(i))
+    j = next(inputs)
+    print(j)
